@@ -60,7 +60,13 @@
             <br>
 
             <label class='title'>classId:</label><br>
-            <input type="text" name="id" value="<%= classId%>">
+            <select name="teacherId">
+                <%
+                    for (Teacher teacher:Data.teacherArrayList){
+                        out.print("<option value='"+teacher.getId()+"'>"+teacher.getId()+"</option>");
+                    }
+                %>
+            </select>
             <br>
 
             <label class='title'>teacherId:</label><br>

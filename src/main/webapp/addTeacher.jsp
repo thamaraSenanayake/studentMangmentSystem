@@ -9,10 +9,7 @@
 
             name:<br>
             <input type="text" name="name" >
-            <br/>
 
-            class id:<br>
-            <input type="text" name="classId" >
             <br><br>
 
             <input type="submit" value="Submit">

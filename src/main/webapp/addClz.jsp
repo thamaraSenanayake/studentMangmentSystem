@@ -31,7 +31,17 @@
     <br>
 
     teacherId:<br>
-    <input type="text" name="teacherId" >
+<%--    <input type="text" name="teacherId" >--%>
+<%--    <br/>--%>
+
+    <select name="teacherId">
+        <%
+            for (Teacher teacher:Data.teacherArrayList){
+                out.print("<option value='"+teacher.getId()+"'>"+teacher.getId()+"</option>");
+            }
+        %>
+    </select>
+
     <br/>
 
     batch details:<br>

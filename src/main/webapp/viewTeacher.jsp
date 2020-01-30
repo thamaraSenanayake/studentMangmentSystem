@@ -28,7 +28,6 @@
         <tr>
             <th>Teacher Id</th>
             <th>teacher name</th>
-            <th>class id</th>
             <th>Edit</th>
 
 
@@ -38,7 +37,6 @@
                      out.print("<tr>");
                      out.print("<td>"+teacher.getId()+"</td>");
                      out.print("<td>"+teacher.getName()+"</td>");
-                     out.print("<td>"+teacher.getClassId()+"</td>");
                      out.print("<td>"+"<a href='/editTeacher?id="+count+"'>Edit</a>"+"</td>");
                      out.print("</tr>");
                      count++;

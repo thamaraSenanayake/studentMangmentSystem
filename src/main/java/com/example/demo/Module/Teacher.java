@@ -8,15 +8,7 @@ import org.springframework.stereotype.Component;
 public class Teacher {
 	private String id;
 	private String name;
-	private String classId;
 
-	public String getClassId() {
-		return classId;
-	}
-
-	public void setClassId(String classId) {
-		this.classId = classId;
-	}
 
 	public String getId() {
 		return id;
@@ -36,7 +28,6 @@ public class Teacher {
 		return "Teacher{" +
 				"id='" + id + '\'' +
 				", name='" + name + '\'' +
-				", classId='" + classId + '\'' +
 				'}';
 	}
 }

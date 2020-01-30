@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @Service
-public class AddTeacher {
+public class TeacherController {
 
     @Autowired
     Teacher teacher;
@@ -35,7 +35,6 @@ public class AddTeacher {
         teacher = new Teacher();
         teacher.setId(req.getParameter("id"));
         teacher.setName(req.getParameter("name"));
-        teacher.setClassId(req.getParameter("classId"));
         Data.teacherArrayList.add(teacher);
         System.out.println("addTeacher to database ");
 
@@ -54,7 +53,6 @@ public class AddTeacher {
 
         teacher.setId(req.getParameter("id"));
         teacher.setName(req.getParameter("name"));
-        teacher.setClassId(req.getParameter("classId"));
 
         int count = Integer.parseInt(req.getParameter("count"));
 
