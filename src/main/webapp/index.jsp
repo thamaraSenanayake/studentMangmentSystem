@@ -29,14 +29,14 @@
 </head>
 <body>
 
-<ul>
-    <li><a class="" href="/addStudent">Add Student</a></li>
-    <li><a href="/viewStudent">View Student</a></li>
-    <li><a href="/addClz">Add Clz</a></li>
-    <li><a href="/viewClz">View Clz</a></li>
-    <li><a href="/addTeacher">Add Teacher</a></li>
-    <li><a href="/viewTeacher">View Teacher</a></li>
-</ul>
+    <ul>
+        <li><a class="" href="/addStudent">Add Student</a></li>
+        <li><a href="/viewStudent">View Student</a></li>
+        <li><a href="/addClz">Add Clz</a></li>
+        <li><a href="/viewClz">View Clz</a></li>
+        <li><a href="/addTeacher">Add Teacher</a></li>
+        <li><a href="/viewTeacher">View Teacher</a></li>
+    </ul>
 
 </body>
 </html>

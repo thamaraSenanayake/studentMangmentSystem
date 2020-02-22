@@ -8,6 +8,7 @@ import com.example.demo.Module.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,6 +41,27 @@ public class StudentController {
     public String editStudent() {
         System.out.println("editStudent");
         return "editStudent.jsp";
+    }
+
+    @RequestMapping(value = "/searchStudent" , method = RequestMethod.POST)
+    public String searchStudents(HttpServletRequest req, Model model) {
+        String id = req.getParameter("id");
+        model.addAttribute("studentName", id);
+
+        int count = 0;
+        for (Student student:Data.studentArrayList) {
+            if (student.getId().equals(id)) {
+                model.addAttribute("studentCount", count);
+                model.addAttribute("studentId", id);
+                model.addAttribute("studentName", student.getName());
+                model.addAttribute("clzId", student.getClzId());
+                model.addAttribute("parentId", student.getParent().getParentId());
+                model.addAttribute("parentName", student.getParent().getParentName());
+            }
+            count++;
+        }
+
+        return "searchStudent.jsp";
     }
 
     @RequestMapping(value = "/addStudent" , method = RequestMethod.POST)

@@ -55,19 +55,9 @@
             <li><a href="/viewTeacher">View Teacher</a></li>
         </ul>
 
-        <form action="/searchStudent" method="post">
-
-            Search:<br>
-            <input type="text" name="id" />
-
-            <br><br>
-
-            <input type="submit" value="Search" />
-
-        </form>
-
         <table>
-            <h1>View Student</h1>
+            <h1>Search Student</h1>
+            <h1>${studentId}</h1>
             <tr>
                 <th>Student Id</th>
                 <th>Student name</th>
@@ -76,23 +66,16 @@
                 <th>Parent name</th>
                 <th>Edit</th>
 
-
-                <%
-                    int count = 0;
-                    for (Student student:Data.studentArrayList){
-                        out.print("<tr>");
-                        out.print("<td>"+student.getId()+"</td>");
-                        out.print("<td>"+student.getName()+"</td>");
-                        out.print("<td>"+student.getClzId()+"</td>");
-                        out.print("<td>"+student.getParent().getParentId()+"</td>");
-                        out.print("<td>"+student.getParent().getParentName()+"</td>");
-                        out.print("<td>"+"<a href='/editStudent?id="+count+"'>Edit</a>"+"</td>");
-                        out.print("</tr>");
-                        count++;
-                    }
-                %>
+            <tr>
+                <td>${studentId}</td>
+                <td>${studentName}</td>
+                <td>${clzId}</td>
+                <td>${parentId}</td>
+                <td>${parentName}</td>
+                <td><a href='/editStudent?id=${studentCount}'>Edit</a></td>
             </tr>
+
         </table>
-        <%out.print(Data.teacherArrayList.toString());%>
+
     </body>
 </html>
